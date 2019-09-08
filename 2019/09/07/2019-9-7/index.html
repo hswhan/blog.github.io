@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="swhan&#39;blog">
 <meta property="og:description" content="i++与++i的区别&amp;emsp;很久之前有去查过这俩的区别，时间久了忘得差不多了，大体只记得计算顺序上有差别。在看C++primer 11页的时候正好看到了这个前缀运算符，顺便重新学习了一下。大概是如下两个区别：   1.运算开销上&amp;emsp;就运算开销来讲，i++会比++i多占用一个寄存器.i++的实质是esp=i;  i=esp+i;会先将i存储在一个临时的寄存器中再对i进行加一操作。++i的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-08T06:08:27.682Z">
+<meta property="og:updated_time" content="2019-09-08T06:10:02.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭博客这一周遇见的一些C++上的小细节——C++Primer(1)">
 <meta name="twitter:description" content="i++与++i的区别&amp;emsp;很久之前有去查过这俩的区别，时间久了忘得差不多了，大体只记得计算顺序上有差别。在看C++primer 11页的时候正好看到了这个前缀运算符，顺便重新学习了一下。大概是如下两个区别：   1.运算开销上&amp;emsp;就运算开销来讲，i++会比++i多占用一个寄存器.i++的实质是esp=i;  i=esp+i;会先将i存储在一个临时的寄存器中再对i进行加一操作。++i的">
@@ -411,7 +411,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i=0;</span><br><span class="line">j=i++;</span><br><span class="line">k=++i;</span><br></pre></td></tr></table></figure>
 
 <p>上述代码执行后结果i=2,j=0,k=2<br><strong>细节：在不影响判断逻辑的情况下使用++i占用内存更小，速度更快。</strong></p>
-<a id="more"></a>
 <h1 id="算数类型在64-32位系统中内存占用问题"><a href="#算数类型在64-32位系统中内存占用问题" class="headerlink" title="算数类型在64/32位系统中内存占用问题"></a>算数类型在64/32位系统中内存占用问题</h1><table>
 <thead>
 <tr>
