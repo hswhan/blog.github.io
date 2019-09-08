@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="swhan&#39;blog">
 <meta property="og:description" content="i++与++i的区别&amp;emsp;很久之前有去查过这俩的区别，时间久了忘得差不多了，大体只记得计算顺序上有差别。在看C++primer 11页的时候正好看到了这个前缀运算符，顺便重新学习了一下。大概是如下两个区别：   1.运算开销上&amp;emsp;就运算开销来讲，i++会比++i多占用一个寄存器.i++的实质是esp=i;  i=esp+i;会先将i存储在一个临时的寄存器中再对i进行加一操作。++i的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-08T03:37:31.321Z">
+<meta property="og:updated_time" content="2019-09-08T05:55:18.909Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭博客这一周遇见的一些C++上的小细节——C++Primer(1)">
 <meta name="twitter:description" content="i++与++i的区别&amp;emsp;很久之前有去查过这俩的区别，时间久了忘得差不多了，大体只记得计算顺序上有差别。在看C++primer 11页的时候正好看到了这个前缀运算符，顺便重新学习了一下。大概是如下两个区别：   1.运算开销上&amp;emsp;就运算开销来讲，i++会比++i多占用一个寄存器.i++的实质是esp=i;  i=esp+i;会先将i存储在一个临时的寄存器中再对i进行加一操作。++i的">
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  238 字
+                  517 字
                 </span>
               
 
@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -411,6 +411,61 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i=0;</span><br><span class="line">j=i++;</span><br><span class="line">k=++i;</span><br></pre></td></tr></table></figure>
 
 <p>上述代码执行后结果i=2,j=0,k=2<br><strong>细节：在不影响判断逻辑的情况下使用++i占用内存更小，速度更快。</strong></p>
+<h1 id="算数类型在64-32位系统中内存占用问题"><a href="#算数类型在64-32位系统中内存占用问题" class="headerlink" title="算数类型在64/32位系统中内存占用问题"></a>算数类型在64/32位系统中内存占用问题</h1><table>
+<thead>
+<tr>
+<th align="center">system</th>
+<th align="center">char</th>
+<th align="center">short</th>
+<th align="center">int</th>
+<th align="center">long</th>
+<th align="center">float</th>
+<th align="center">double</th>
+<th align="center">long long</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">32位</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">8</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">64位</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">8</td>
+<td align="center">4</td>
+<td align="center">8</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">-Note：单位byte，换算成位(bit)乘以8</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">关于long的内存占用，在64位Windows上使用sizeof函数跑出来的结果和int一样占用4个字节 <del>我买了个假电脑嗷</del> ，而在64位Linux系统上是占用8个字节的。查了一些帖子说这个问题是不同的编译器用的数据模型不一样，64位Windows用的是LLP64模型，64位Linux用的是LP64。看师兄们的笔试题，<strong>一般问64位操作系统，默认按8个字节来处理的</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="指定字面类型值"><a href="#指定字面类型值" class="headerlink" title="指定字面类型值"></a>指定字面类型值</h1><p>C++Primer p.37，对字符和字符串字面值有：<br>前缀|含义|类型<br> :-:|:-:|:-:<br> u|Unicode 16字符|char16_t<br> U|Unicode 32字符|char32_t<br> L|kuanzifu |wchat_t<br> u8|UTF-8|char<br> 整数和浮点数类型有：<br>后缀|最小匹配类型 |后缀|类型<br> :-:|:-:|:-:| :-:<br> u/U|unsigned|f/F|float<br> l/L|long|l/L|long double<br> ll/LL|long long<br> <strong>细节：单引号’a’表示字符，双引号“abc”表示字符串</strong></p>
 
       
     </div>
@@ -611,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#i-与-i的区别"><span class="nav-number">1.</span> <span class="nav-text">i++与++i的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-运算开销上"><span class="nav-number">1.1.</span> <span class="nav-text">1.运算开销上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-判断逻辑上"><span class="nav-number">1.2.</span> <span class="nav-text">2.判断逻辑上</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#i-与-i的区别"><span class="nav-number">1.</span> <span class="nav-text">i++与++i的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-运算开销上"><span class="nav-number">1.1.</span> <span class="nav-text">1.运算开销上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-判断逻辑上"><span class="nav-number">1.2.</span> <span class="nav-text">2.判断逻辑上</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算数类型在64-32位系统中内存占用问题"><span class="nav-number">2.</span> <span class="nav-text">算数类型在64/32位系统中内存占用问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指定字面类型值"><span class="nav-number">3.</span> <span class="nav-text">指定字面类型值</span></a></li></ol></div>
             
 
           </div>
