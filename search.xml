@@ -5,8 +5,8 @@
     
     <entry>
       <title>搭博客这一周遇见的一些C++上的小细节——C++Primer(1)</title>
-      <link href="/blog.github.io/2019/09/07/2019-9-7/"/>
-      <url>/blog.github.io/2019/09/07/2019-9-7/</url>
+      <link href="/2019/09/07/2019-9-7/"/>
+      <url>/2019/09/07/2019-9-7/</url>
       
         <content type="html"><![CDATA[<h1 id="i-与-i的区别"><a href="#i-与-i的区别" class="headerlink" title="i++与++i的区别"></a>i++与++i的区别</h1><p>&emsp;很久之前有去查过这俩的区别，时间久了忘得差不多了，大体只记得计算顺序上有差别。在看C++primer 11页的时候正好看到了这个前缀运算符，顺便重新学习了一下。大概是如下两个区别：  </p><h2 id="1-运算开销上"><a href="#1-运算开销上" class="headerlink" title="1.运算开销上"></a>1.运算开销上</h2><p>&emsp;就运算开销来讲，i++会比++i多占用一个寄存器.<br>i++的实质是<code>esp=i;  i=esp+i;</code>会先将i存储在一个临时的寄存器中再对i进行加一操作。<br>++i的实质是<code>i=i+1;</code>直接将i+1作为一个整体进行返回。</p><h2 id="2-判断逻辑上"><a href="#2-判断逻辑上" class="headerlink" title="2.判断逻辑上"></a>2.判断逻辑上</h2><p>&emsp;i++是先进行判断后加一，++i则是先自加后判断</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i=0;</span><br><span class="line">j=i++;</span><br><span class="line">k=++i;</span><br></pre></td></tr></table></figure><p>上述代码执行后结果i=2,j=0,k=2<br><strong>细节：在不影响判断逻辑的情况下使用++i占用内存更小，速度更快。</strong></p>]]></content>
       
@@ -30,8 +30,8 @@
     
     <entry>
       <title>初步建成~👏👏👏</title>
-      <link href="/blog.github.io/2019/09/07/First-article/"/>
-      <url>/blog.github.io/2019/09/07/First-article/</url>
+      <link href="/2019/09/07/First-article/"/>
+      <url>/2019/09/07/First-article/</url>
       
         <content type="html"><![CDATA[<p>虽然中间 <del>鸽</del> 学习了一周，总算是把blog搭完了嗷。<br>顺道换了个主题感觉还不错，有空在完善完善。<br>之后开始慢慢记录了嗷。</p>]]></content>
       
