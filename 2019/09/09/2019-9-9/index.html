@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="C++,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="梦里不觉秋已深，余情岂是为他人。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="swhan&#39;blog">
-<meta property="og:url" content="http://swhan.xyz/tags/index.html">
+<meta name="description" content="Primer的P.45-53详细介绍了两种复合类型：指针和引用 头大的指针它leile 好久不敲代码了，现在再重新回顾回顾。   #引用引用为对象起了另外一个名字，通过将声明符写成&amp;amp;d的形式来定义引用类型，其中d为声明的变量。一旦初始化完成，引用将和它的初始值对象（引用只能绑定在对象上，而不是某个字面值或者表达式的计算结果）一直绑定在一起，所以引用必须要初始化。为引用赋值，实际上就把值赋给">
+<meta name="keywords" content="C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="符合类型：引用和指针——C++Primer(2)">
+<meta property="og:url" content="http://swhan.xyz/2019/09/09/2019-9-9/index.html">
 <meta property="og:site_name" content="swhan&#39;blog">
-<meta property="og:description" content="梦里不觉秋已深，余情岂是为他人。">
+<meta property="og:description" content="Primer的P.45-53详细介绍了两种复合类型：指针和引用 头大的指针它leile 好久不敲代码了，现在再重新回顾回顾。   #引用引用为对象起了另外一个名字，通过将声明符写成&amp;amp;d的形式来定义引用类型，其中d为声明的变量。一旦初始化完成，引用将和它的初始值对象（引用只能绑定在对象上，而不是某个字面值或者表达式的计算结果）一直绑定在一起，所以引用必须要初始化。为引用赋值，实际上就把值赋给">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-07T10:58:08.639Z">
+<meta property="og:updated_time" content="2019-09-09T02:49:28.936Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swhan&#39;blog">
-<meta name="twitter:description" content="梦里不觉秋已深，余情岂是为他人。">
+<meta name="twitter:title" content="符合类型：引用和指针——C++Primer(2)">
+<meta name="twitter:description" content="Primer的P.45-53详细介绍了两种复合类型：指针和引用 头大的指针它leile 好久不敲代码了，现在再重新回顾回顾。   #引用引用为对象起了另外一个名字，通过将声明符写成&amp;amp;d的形式来定义引用类型，其中d为声明的变量。一旦初始化完成，引用将和它的初始值对象（引用只能绑定在对象上，而不是某个字面值或者表达式的计算结果）一直绑定在一起，所以引用必须要初始化。为引用赋值，实际上就把值赋给">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://swhan.xyz/tags/">
+  <link rel="canonical" href="http://swhan.xyz/2019/09/09/2019-9-9/">
 
 
 
 
 
-  <title>标签 | swhan'blog</title>
+  <title>符合类型：引用和指针——C++Primer(2) | swhan'blog</title>
   
 
 
@@ -272,40 +273,210 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://swhan.xyz/2019/09/09/2019-9-9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="swhan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="swhan'blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 1 个标签
+          <h1 class="post-title" itemprop="name headline">符合类型：引用和指针——C++Primer(2)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-09T09:06:28+08:00">
+                2019-09-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-Primer/" itemprop="url" rel="index">
+                    <span itemprop="name">C++Primer</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3 分钟
+                </span>
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/C/" style="font-size: 12px; color: #ccc">C++</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Primer的P.45-53详细介绍了两种复合类型：指针和引用 <del>头大的指针它leile</del> 好久不敲代码了，现在再重新回顾回顾。  </p>
+<p>#引用<br>引用为对象起了另外一个名字，通过将声明符写成&amp;d的形式来定义引用类型，其中d为声明的变量。<br>一旦初始化完成，引用将和它的初始值对象（引用只能绑定在对象上，而不是某个字面值或者表达式的计算结果）一直绑定在一起，所以引用必须要初始化。<br>为引用赋值，实际上就把值赋给了与引用绑定的对象。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int i=1024,i2=2048;     //i与r都是int</span><br><span class="line">int &amp;r=i,r2=i2;         //r为引用，与i绑定在一起，r2为int</span><br><span class="line">int i3=1024,&amp;ri=i3;     //i3是int，ri是引用与i3绑定在一起</span><br><span class="line">int &amp;r3=i3,&amp;r4=i2;      //r3,r4均为引用</span><br></pre></td></tr></table></figure>
+
+<p><strong>引用即别名：</strong> 引用并非对象，它只是为一个已存在的对象起的另外一个名字。  </p>
+<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><p>指针是<strong>指向</strong>另一种类型的符合类型。和引用类似，指针页实现了对其他对象的间接访问，但又存在很多不同：<br>1.指针本身就是一个对象，允许对指针进行赋值和拷贝，而且在指针的生命周期中可以现后指向几个不同的对象；<br>2.指针无需在定义时赋值，和其它类型一样，在块作用域内定义指针如果没有被初始化，也将拥有一个不确定的值。<br>指针存放某个对象的地址，要想获取地址需要使用取地址符（&amp;）。指针的类型要和所指向的对象严格匹配。  </p>
+<p>指针的值（即地址）应属于以下四种状态之一：<br>1.指向一个对象。<br>2.只想紧邻对象所占空间的下一个位置。<br>3.空指针，意味着指针没有指向任何对象。<br>4.无效指针，即上述情况之外的其他值。</p>
+<p>如果指针指向了一个对象，则允许使用解引用符（*）来访问对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int varl=42;</span><br><span class="line">int *p=varl;</span><br><span class="line">cout&lt;&lt;*p;</span><br></pre></td></tr></table></figure>
+
+<h2 id="空指针"><a href="#空指针" class="headerlink" title="空指针"></a>空指针</h2><p>空指针不指向任何对象，得到空指针最直接的办法就是用字面值nullptr来初始化指针，也可以用字面值0来初始化。（过去还用用名为NULL的预处理变量来给指针赋值，它的值就是0）<br><strong>建议：初始化所有指针。</strong> 访问一个未初始化的指针相当于访问一个本不存在的位置上的本不存在的对象，如果这个指针所占的内存空间又恰好有内容，而这些内容又恰好被当作某个地址，就很难分辨它到底是合法还是非法的了。<br><strong>赋值永远改变的是等号左边的对象</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int ival=42;</span><br><span class="line">int *pi=0;      //pi被初始化，但没有指向任何对象</span><br><span class="line">pi=&amp;ival;       //pi的值被改变，现在指向了ival</span><br><span class="line">*pi=0;          //ival的制备改变，指针pi并没有变</span><br><span class="line">``` </span><br><span class="line">## void*指针</span><br><span class="line">void*是一种特殊的指针类型，它可以用于存放任意对象的地址，但是**不能直接操作void\*指针所指的对象**，因为我们不知道这个对象到底是什么类型的。</span><br><span class="line">## 其他</span><br><span class="line">### 指向指针的指针</span><br><span class="line">通过\*的个数可以区分指针的级别，即\*\*表示指向指针的指针，\***表示指向指针的指针的指针~~好绕啊~~</span><br><span class="line">### 指向指针的引用</span><br></pre></td></tr></table></figure>
+
+<p>int i=42;<br>int <em>p;         \p是一个指针<br>int *&amp;r=p;      \r是一个对指针p的引用<br>r=&i;           \r引用了一个指针，这里就相当于令p指向i<br>*r=0;           \对r解引用,相当于</em>p,得到i,即令i=0<br>```<br><del>这玩意也好绕</del> 要理解r的类型到底是什么，最简单的方法就是<strong>从右往左阅读r的定义，离变量声明最进的符号对变量类型有最直接的影响。</strong></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/07/2019-9-7/" rel="next" title="搭博客这一周遇见的一些C++上的小细节——C++Primer(1)">
+                <i class="fa fa-chevron-left"></i> 搭博客这一周遇见的一些C++上的小细节——C++Primer(1)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -314,6 +485,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -334,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -425,6 +609,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#指针"><span class="nav-number">1.</span> <span class="nav-text">指针</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#空指针"><span class="nav-number">1.1.</span> <span class="nav-text">空指针</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
