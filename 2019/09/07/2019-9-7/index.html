@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="swhan&#39;blog">
 <meta property="og:description" content="i++与++i的区别&amp;emsp;很久之前有去查过这俩的区别，时间久了忘得差不多了，大体只记得计算顺序上有差别。在看C++primer 11页的时候正好看到了这个前缀运算符，顺便重新学习了一下。大概是如下两个区别：   1.运算开销上&amp;emsp;就运算开销来讲，i++会比++i多占用一个寄存器.i++的实质是esp=i;  i=esp+1;会先将i存储在一个临时的寄存器中再对i进行加一操作。++i的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-08T07:55:38.074Z">
+<meta property="og:updated_time" content="2019-09-09T02:52:04.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭博客这一周遇见的一些C++上的小细节——C++Primer(1)">
 <meta name="twitter:description" content="i++与++i的区别&amp;emsp;很久之前有去查过这俩的区别，时间久了忘得差不多了，大体只记得计算顺序上有差别。在看C++primer 11页的时候正好看到了这个前缀运算符，顺便重新学习了一下。大概是如下两个区别：   1.运算开销上&amp;emsp;就运算开销来讲，i++会比++i多占用一个寄存器.i++的实质是esp=i;  i=esp+1;会先将i存储在一个临时的寄存器中再对i进行加一操作。++i的">
@@ -446,66 +446,8 @@
 </tr>
 </tbody></table>
 <p> -Note：单位byte，换算成位(bit)乘以8<br> 关于long的内存占用，在64位Windows上使用sizeof函数跑出来的结果和int一样占用4个字节 <del>我买了个假电脑嗷</del> ，而在64位Linux系统上是占用8个字节的。查了一些帖子说这个问题是不同的编译器用的数据模型不一样，64位Windows用的是LLP64模型，64位Linux用的是LP64。看师兄们的笔试题，<strong>一般问64位操作系统，默认按8个字节来处理的</strong></p>
-<h1 id="指定字面类型值"><a href="#指定字面类型值" class="headerlink" title="指定字面类型值"></a>指定字面类型值</h1><p>C++Primer p.37，对字符和字符串字面值有：</p>
-<table>
-<thead>
-<tr>
-<th align="center">前缀</th>
-<th align="center">含义</th>
-<th align="center">类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">u</td>
-<td align="center">Unicode 16字符</td>
-<td align="center">char16_t</td>
-</tr>
-<tr>
-<td align="center">U</td>
-<td align="center">Unicode 32字符</td>
-<td align="center">char32_t</td>
-</tr>
-<tr>
-<td align="center">L</td>
-<td align="center">宽字符</td>
-<td align="center">wchat_t</td>
-</tr>
-<tr>
-<td align="center">u8</td>
-<td align="center">UTF-8</td>
-<td align="center">char</td>
-</tr>
-</tbody></table>
-<p> 整数和浮点数类型有：</p>
-<table>
-<thead>
-<tr>
-<th align="center">后缀</th>
-<th align="center">最小匹配类型</th>
-<th align="center">后缀</th>
-<th align="center">类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">u/U</td>
-<td align="center">unsigned</td>
-<td align="center">f/F</td>
-<td align="center">float</td>
-</tr>
-<tr>
-<td align="center">l/L</td>
-<td align="center">long</td>
-<td align="center">l/L</td>
-<td align="center">long double</td>
-</tr>
-<tr>
-<td align="center">ll/LL</td>
-<td align="center">long long</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<p> <strong>细节：单引号’a’表示字符，双引号“abc”表示字符串</strong><br> 下一篇整理整理指针部分嗷</p>
+<h1 id="指定字面类型值"><a href="#指定字面类型值" class="headerlink" title="指定字面类型值"></a>指定字面类型值</h1><p>C++Primer p.37，对字符和字符串字面值有：<br>前缀|含义|类型|<br> :-:|:-:|:-:|<br> u|Unicode 16字符|char16_t|<br> U|Unicode 32字符|char32_t|<br> L|宽字符 |wchat_t|<br> u8|UTF-8|char|</p>
+<p> 整数和浮点数类型有：<br>后缀|最小匹配类型 |后缀|类型|<br> :-:|:-:|:-:| :-:|<br> u/U|unsigned|f/F|float|<br> l/L|long|l/L|long double|<br> ll/LL|long long|<br> <strong>细节：单引号’a’表示字符，双引号“abc”表示字符串</strong><br> 下一篇整理整理指针部分嗷</p>
 
       
     </div>
