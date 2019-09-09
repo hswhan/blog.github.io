@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="swhan&#39;blog">
 <meta property="og:description" content="Primer的P.45-53详细介绍了两种复合类型：指针和引用 头大的指针它leile 好久不敲代码了，现在再重新回顾回顾。   引用引用为对象起了另外一个名字，通过将声明符写成&amp;amp;d的形式来定义引用类型，其中d为声明的变量。一旦初始化完成，引用将和它的初始值对象（引用只能绑定在对象上，而不是某个字面值或者表达式的计算结果）一直绑定在一起，所以引用必须要初始化。为引用赋值，实际上就把值赋给了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-09T02:52:21.000Z">
+<meta property="og:updated_time" content="2019-09-09T02:53:25.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="符合类型：引用和指针——C++Primer(2)">
 <meta name="twitter:description" content="Primer的P.45-53详细介绍了两种复合类型：指针和引用 头大的指针它leile 好久不敲代码了，现在再重新回顾回顾。   引用引用为对象起了另外一个名字，通过将声明符写成&amp;amp;d的形式来定义引用类型，其中d为声明的变量。一旦初始化完成，引用将和它的初始值对象（引用只能绑定在对象上，而不是某个字面值或者表达式的计算结果）一直绑定在一起，所以引用必须要初始化。为引用赋值，实际上就把值赋给了">
@@ -418,7 +418,7 @@
 <h2 id="空指针"><a href="#空指针" class="headerlink" title="空指针"></a>空指针</h2><p>空指针不指向任何对象，得到空指针最直接的办法就是用字面值nullptr来初始化指针，也可以用字面值0来初始化。（过去还用用名为NULL的预处理变量来给指针赋值，它的值就是0）<br><strong>建议：初始化所有指针。</strong> 访问一个未初始化的指针相当于访问一个本不存在的位置上的本不存在的对象，如果这个指针所占的内存空间又恰好有内容，而这些内容又恰好被当作某个地址，就很难分辨它到底是合法还是非法的了。<br><strong>赋值永远改变的是等号左边的对象</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int ival=42;</span><br><span class="line">int *pi=0;      //pi被初始化，但没有指向任何对象</span><br><span class="line">pi=&amp;ival;       //pi的值被改变，现在指向了ival</span><br><span class="line">*pi=0;          //ival的制备改变，指针pi并没有变</span><br><span class="line">``` </span><br><span class="line">## void*指针</span><br><span class="line">void*是一种特殊的指针类型，它可以用于存放任意对象的地址，但是**不能直接操作void\*指针所指的对象**，因为我们不知道这个对象到底是什么类型的。</span><br><span class="line">## 其他</span><br><span class="line">### 指向指针的指针</span><br><span class="line">通过\*的个数可以区分指针的级别，即\*\*表示指向指针的指针，\***表示指向指针的指针的指针~~好绕啊~~</span><br><span class="line">### 指向指针的引用</span><br></pre></td></tr></table></figure>
 
-<p>int i=42;<br>int <em>p;         \p是一个指针<br>int *&amp;r=p;      \r是一个对指针p的引用<br>r=&i;           \r引用了一个指针，这里就相当于令p指向i<br>*r=0;           \对r解引用,相当于</em>p,得到i,即令i=0<br>```<br><del>这玩意也好绕</del> 要理解r的类型到底是什么，最简单的方法就是<strong>从右往左阅读r的定义</strong>，离变量声明最进的符号对变量类型有最直接的影响。</p>
+<p>int i=42;<br>int <em>p;         //p是一个指针<br>int *&amp;r=p;      //r是一个对指针p的引用<br>r=&i;           //r引用了一个指针，这里就相当于令p指向i<br>*r=0;           //对r解引用,相当于</em>p,得到i,即令i=0<br>```<br><del>这玩意也好绕</del> 要理解r的类型到底是什么，最简单的方法就是<strong>从右往左阅读r的定义</strong>，离变量声明最进的符号对变量类型有最直接的影响。</p>
 
       
     </div>
