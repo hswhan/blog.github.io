@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://swhan.xyz/2019/09/16/算法时间复杂度计算/timecomplexity.jpg">
 <meta property="og:image" content="http://swhan.xyz/2019/09/16/算法时间复杂度计算/sort.png">
-<meta property="og:updated_time" content="2019-09-16T12:54:24.299Z">
+<meta property="og:updated_time" content="2019-09-16T13:09:14.356Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法时间复杂度计算">
 <meta name="twitter:description" content="时间复杂度的计算大二的数据结构课上倒是学过现在基本还给老师了。算法的时间复杂度，简单理解的话就是代码的运行时间，但是不同的编译环境可能会导致运算时间不同，无法衡量。这里用T(n)表示代码进行基本操作的次数，以O(f(n))=T(n)，来表示时间复杂度，其中n表示数据规模，O(f(n))表示允许算法所需要执行的指令数，和f(n)成正比。要计算时间复杂度，首先需要知道以下几点：1.常数项度函数的增长速">
@@ -428,11 +428,11 @@
 <h2 id="线性阶"><a href="#线性阶" class="headerlink" title="线性阶"></a>线性阶</h2><p>O(n)<br>对于一个循环次数为n的for循环，里面的代码会执行n遍，可以用O(n)来表示时间复杂度。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> rst;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)&#123;</span><br><span class="line">        rst+=i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> rst;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="平方阶"><a href="#平方阶" class="headerlink" title="平方阶"></a>平方阶</h1><p>当存在双重循环的时候，它的时间复杂度就变成了O(n^2)。(O(n^3同理))</p>
+<h2 id="平方阶"><a href="#平方阶" class="headerlink" title="平方阶"></a>平方阶</h2><p>当存在双重循环的时候，它的时间复杂度就变成了O(n^2)。(O(n^3同理))</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> main &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;++j)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"Hello, World!\n"</span>);      <span class="comment">// 时间复杂度为 O(1)</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>附上一张看到的时间复杂度比较图：<br><img src="//swhan.xyz/2019/09/16/算法时间复杂度计算/timecomplexity.jpg" alt="时间复杂度"><br>O(1) &lt; O(logn)&lt; O(n) &lt; O(nlogn) &lt; O(n^2) &lt; O(n^3) &lt; { O(2^n) &lt; O(n!) &lt; O(n^n) }<br>以及常用的排序算法的时间复杂度比较：</p>
-<h2 id><a href="#" class="headerlink" title></a><img src="//swhan.xyz/2019/09/16/算法时间复杂度计算/sort.png" alt="时间复杂度"></h2>
+<p>附上一张看到的时间复杂度比较图：<br><img src="/2019/09/16/算法时间复杂度计算/timecomplexity.jpg" alt="时间复杂度"><br>O(1) &lt; O(logn)&lt; O(n) &lt; O(nlogn) &lt; O(n^2) &lt; O(n^3) &lt; { O(2^n) &lt; O(n!) &lt; O(n^n) }<br>以及常用的排序算法的时间复杂度比较：<br><img src="/2019/09/16/算法时间复杂度计算/sort.png" alt="时间复杂度"></p>
+
       
     </div>
     
@@ -632,7 +632,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#时间复杂度的计算"><span class="nav-number">1.</span> <span class="nav-text">时间复杂度的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#四个便利的法则："><span class="nav-number">1.1.</span> <span class="nav-text">四个便利的法则：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#时间复杂度的排序"><span class="nav-number">2.</span> <span class="nav-text">时间复杂度的排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常数阶"><span class="nav-number">2.1.</span> <span class="nav-text">常数阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对数阶"><span class="nav-number">2.2.</span> <span class="nav-text">对数阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性阶"><span class="nav-number">2.3.</span> <span class="nav-text">线性阶</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#平方阶"><span class="nav-number">3.</span> <span class="nav-text">平方阶</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#时间复杂度的计算"><span class="nav-number">1.</span> <span class="nav-text">时间复杂度的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#四个便利的法则："><span class="nav-number">1.1.</span> <span class="nav-text">四个便利的法则：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#时间复杂度的排序"><span class="nav-number">2.</span> <span class="nav-text">时间复杂度的排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常数阶"><span class="nav-number">2.1.</span> <span class="nav-text">常数阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对数阶"><span class="nav-number">2.2.</span> <span class="nav-text">对数阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性阶"><span class="nav-number">2.3.</span> <span class="nav-text">线性阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平方阶"><span class="nav-number">2.4.</span> <span class="nav-text">平方阶</span></a></li></ol></li></ol></div>
             
 
           </div>
