@@ -4,12 +4,43 @@
   
     
     <entry>
-      <title>d4</title>
-      <link href="/2019/09/23/d4/"/>
-      <url>/2019/09/23/d4/</url>
+      <title>C++Primer(5)——标准库类型vector</title>
+      <link href="/2019/09/23/C++Primer(5)%E2%80%94%E2%80%94%E6%A0%87%E5%87%86%E5%BA%93%E7%B1%BB%E5%9E%8Bvector/"/>
+      <url>/2019/09/23/C++Primer(5)%E2%80%94%E2%80%94%E6%A0%87%E5%87%86%E5%BA%93%E7%B1%BB%E5%9E%8Bvector/</url>
       
         <content type="html"><![CDATA[]]></content>
       
+      
+      <categories>
+          
+          <category> C++Primer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GuGuGu</title>
+      <link href="/2019/09/23/d4/"/>
+      <url>/2019/09/23/d4/</url>
+      
+        <content type="html"><![CDATA[<p>一不小心又鸽了几天，没办法。<del>猛汉王是真滴好玩</del>上周看了柯南的新剧场版M23，还不错就是感觉结束的有点快，还没看够。<br>顺便把怪猎通了，这玩意真的是通关才是开始哦。<br>这周准备先把vector搞定，然后再整几道leetcode题学学。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Diary </category>
+          
+      </categories>
       
       
     </entry>
@@ -17,7 +48,7 @@
     
     
     <entry>
-      <title>C++Primer(4)——标准库类型string和vector</title>
+      <title>C++Primer(4)——标准库类型string</title>
       <link href="/2019/09/18/C++Primer(4)%E2%80%94%E2%80%94%E6%A0%87%E5%87%86%E5%BA%93%E7%B1%BB%E5%9E%8Bstring/"/>
       <url>/2019/09/18/C++Primer(4)%E2%80%94%E2%80%94%E6%A0%87%E5%87%86%E5%BA%93%E7%B1%BB%E5%9E%8Bstring/</url>
       
